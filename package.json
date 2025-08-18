@@ -1,0 +1,53 @@
+{
+    "name": "pico-slider",
+    "version": "1.0.0",
+    "description": "A lightweight, reusable image slider for Pico.css (or standalone).",
+    "main": "dist/slider.js",
+    "module": "dist/slider.esm.js",
+    "style": "dist/slider.css",
+    "exports": {
+        ".": {
+            "import": "./dist/slider.esm.js",
+            "require": "./dist/slider.js",
+            "default": "./dist/slider.js"
+        },
+        "./css": {
+            "import": "./dist/slider.css",
+            "default": "./dist/slider.css"
+        },
+        "./standalone": {
+            "import": "./dist/slider.standalone.js",
+            "require": "./dist/slider.standalone.js",
+            "default": "./dist/slider.standalone.js"
+        },
+        "./standalone/css": {
+            "import": "./dist/slider.standalone.css",
+            "default": "./dist/slider.standalone.css"
+        }
+    },
+    "types": "index.d.ts",
+    "files": [
+        "dist",
+        "index.d.ts"
+    ],
+    "scripts": {
+        "build": "rollup -c",
+        "dev": "rollup -c -w",
+        "prepublishOnly": "npm run build"
+    },
+    "keywords": [
+        "slider",
+        "carousel",
+        "pico",
+        "picocss",
+        "lightweight",
+        "javascript"
+    ],
+    "author": "Your Name",
+    "license": "MIT",
+    "devDependencies": {
+        "rollup": "^4",
+        "rollup-plugin-css-only": "^4",
+        "@rollup/plugin-terser": "^0"
+    }
+}

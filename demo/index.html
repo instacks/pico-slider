@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Pico Slider Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css" />
+    <link rel="stylesheet" href="../dist/slider.css" />
+</head>
+
+<body>
+    <main class="container">
+        <h2>Slider Example</h2>
+        <section class="pico-slider" id="slider1">
+            <div class="pico-slides">
+                <img src="https://picsum.photos/id/1015/800/400" alt="Mountain lake">
+                <img src="https://picsum.photos/id/1016/800/400" alt="Forest canopy">
+                <img src="https://picsum.photos/id/1018/800/400" alt="River in a canyon">
+            </div>
+            <div class="pico-controls">
+                <button class="contrast pico-prev">‹</button>
+                <button class="contrast pico-next">›</button>
+            </div>
+            <div class="pico-caption"></div>
+            <div class="pico-indicators"></div>
+        </section>
+    </main>
+
+    <script type="module">
+        import PicoSlider from "../dist/slider.esm.js";
+
+        new PicoSlider(document.querySelector("#slider1"), {
+            autoplay: true,
+            interval: 3000
+        });
+    </script>
+</body>
+
+</html>
