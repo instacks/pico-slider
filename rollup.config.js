@@ -1,5 +1,7 @@
-import css from "rollup-plugin-css-only";
-import terser from '@rollup/plugin-terser'
+import copy from "rollup-plugin-copy";
+import terser from '@rollup/plugin-terser';
+import serve from 'rollup-plugin-serve';
+import livereload from 'rollup-plugin-livereload';
 
 export default [
     {
@@ -9,16 +11,23 @@ export default [
             { file: "dist/slider.esm.js", format: "esm" }
         ],
         plugins: [
-            css({ output: "slider.css" }), // Pico-dependent version
-            terser()
-        ]
-    },
-    {
-        input: "src/slider.js",
-        output: { file: "dist/slider.standalone.js", format: "umd", name: "PicoSlider" },
-        plugins: [
-            css({ output: "slider.standalone.css" }), // Standalone version
-            terser()
+            copy({
+                targets: [
+                    { src: "src/slider.css", dest: "dist" }
+                ],
+                verbose: true,
+                copyOnce: true
+            }),
+            copy({
+                targets: [
+                    { src: "src/slider.standalone.css", dest: "dist" }
+                ],
+                verbose: true,
+                copyOnce: true
+            }),
+            terser(),
+            serve({ contentBase: 'dist', port: 5000 }),
+            livereload('dist')
         ]
     }
 ];
