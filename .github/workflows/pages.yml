@@ -27,7 +27,8 @@ jobs:
       - name: Copy demo + dist
         run: |
           mkdir public
-          cp -r demo/* public/
+          mkdir public/demo
+          cp -r demo/* public/demo/
           mkdir -p public/dist
           cp -r dist/* public/dist/
 
