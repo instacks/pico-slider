@@ -1,38 +1,102 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pico Slider Demo</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css" />
-    <link rel="stylesheet" href="../dist/slider.css" />
+
+    <!-- Pico.css framework (for first slider demo) -->
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+    <link rel="stylesheet" href="../dist/slider.css">
+
+    <!-- Standalone slider styles (for second demo) -->
+    <!-- <link rel="stylesheet" href="../dist/slider.standalone.css"> -->
+    <link rel="stylesheet" href="demo.css">
+    <style>
+        body {
+            margin: 2rem;
+        }
+
+        h2 {
+            margin-top: 3rem;
+        }
+
+        .demo-container {
+            max-width: 600px;
+            margin: 0 auto 3rem auto;
+        }
+    </style>
 </head>
 
 <body>
-    <main class="container">
-        <h2>Slider Example</h2>
-        <section class="pico-slider" id="slider1">
-            <div class="pico-slides">
-                <img src="https://picsum.photos/id/1015/800/400" alt="Mountain lake">
-                <img src="https://picsum.photos/id/1016/800/400" alt="Forest canopy">
-                <img src="https://picsum.photos/id/1018/800/400" alt="River in a canyon">
+    <header>
+        <h1>Pico Slider Demo</h1>
+        <button class="toggle-theme" id="themeToggle">Toggle Dark Mode</button>
+    </header>
+    <main>
+
+        <!-- Slider with Pico.css styles -->
+        <section class="demo-container">
+            <h2>Pico.css Slider</h2>
+            <div class="pico-slider" id="slider-pico" tabindex="0">
+                <div class="pico-slides">
+                    <img src="https://placehold.co/800x400" alt="Slide 1" data-caption="Beautiful mountains">
+                    <img src="https://placehold.co/800x400" alt="Slide 2" data-caption="Cute dog">
+                    <img src="https://placehold.co/800x400" alt="Slide 3" data-caption="Calm lake">
+                </div>
+                <div class="pico-controls">
+                    <button class="contrast pico-prev">‹</button>
+                    <button class="contrast pico-next">›</button>
+                </div>
+                <div class="pico-caption"></div>
+                <div class="pico-indicators"></div>
             </div>
-            <div class="pico-controls">
-                <button class="contrast pico-prev">‹</button>
-                <button class="contrast pico-next">›</button>
+        </section>
+
+        <!-- Slider with standalone CSS -->
+        <section class="demo-container">
+            <h2>Standalone Slider</h2>
+            <div class="pico-slider" id="slider-standalone" tabindex="0">
+                <div class="pico-slides">
+                    <img src="https://placehold.co/800x400" alt="Slide 1" data-caption="Sunset in the desert">
+                    <img src="https://placehold.co/800x400" alt="Slide 2" data-caption="Snowy forest">
+                    <img src="https://placehold.co/800x400" alt="Slide 3" data-caption="City skyline">
+                </div>
+                <div class="pico-controls">
+                    <button class="contrast pico-prev">‹</button>
+                    <button class="contrast pico-next">›</button>
+                </div>
+                <div class="pico-caption"></div>
+                <div class="pico-indicators"></div>
             </div>
-            <div class="pico-caption"></div>
-            <div class="pico-indicators"></div>
         </section>
     </main>
 
-    <script type="module">
-        import PicoSlider from "../dist/slider.esm.js";
+    <!-- Scripts -->
+    <script src="../dist/slider.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            new PicoSlider(document.querySelector("#slider-pico"), {
+                autoplay: true,
+                interval: 3000,
+                captions: true,
+                indicators: true,
+                keyboard: true
+            });
 
-        new PicoSlider(document.querySelector("#slider1"), {
-            autoplay: true,
-            interval: 3000
+            new PicoSlider(document.querySelector("#slider-standalone"), {
+                autoplay: false,
+                captions: true,
+                indicators: true
+            });
+        });
+
+        // Simple theme toggle
+        const toggle = document.getElementById("themeToggle");
+        toggle.addEventListener("click", () => {
+            document.body.dataset.theme =
+                document.body.dataset.theme === "dark" ? "light" : "dark";
         });
     </script>
 </body>

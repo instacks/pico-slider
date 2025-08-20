@@ -1,0 +1,65 @@
+/* Demo showcase styling (not part of slider library) */
+
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  background: var(--background-color, #fff);
+  color: var(--text-color, #222);
+  transition: background 0.3s, color 0.3s;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+h1 {
+  margin-bottom: 0.5rem;
+}
+
+p {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  color: var(--text-muted, #666);
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
+
+.demo-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.demo-container h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Slider area extra styling */
+.pico-slider {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Dark mode toggle */
+.toggle-theme {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  border: 1px solid currentColor;
+  border-radius: 0.25rem;
+  background: transparent;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+[data-theme="dark"] {
+  --background-color: #121212;
+  --text-color: #f5f5f5;
+  --text-muted: #aaa;
+}

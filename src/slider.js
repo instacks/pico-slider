@@ -100,11 +100,14 @@ class PicoSlider {
 }
 
 // Initialize all sliders on page
-document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll(".pico-slider").forEach(sliderEl => {
-        new PicoSlider(sliderEl, {
-            autoplay: sliderEl.dataset.autoplay !== "false",
-            interval: parseInt(sliderEl.dataset.interval || "4000", 10)
-        });
-    });
-});
+// document.addEventListener("DOMContentLoaded", () => {
+//     document.querySelectorAll(".pico-slider").forEach(sliderEl => {
+//         new PicoSlider(sliderEl, {
+//             autoplay: sliderEl.dataset.autoplay !== "false",
+//             interval: parseInt(sliderEl.dataset.interval || "4000", 10)
+//         });
+//     });
+// });
+
+// export for Rollup
+export default PicoSlider;
