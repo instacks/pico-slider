@@ -16,12 +16,11 @@ Or via CDN:
 ```html
 <!-- Pico.css version -->
 <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
-<link rel="stylesheet" href="https://unpkg.com/pico-slider-js/dist/slider.css">
-<script src="https://unpkg.com/pico-slider-js/dist/slider.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/pico-slider-js/dist/pico-slider.css">
+<script src="https://unpkg.com/pico-slider-js/dist/pico-slider.js"></script>
 
 <!-- Standalone version -->
-<link rel="stylesheet" href="https://unpkg.com/pico-slider-js/dist/slider.standalone.css">
-<script src="https://unpkg.com/pico-slider-js/dist/slider.standalone.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/pico-slider-js/dist/pico-slider.standalone.css">
 ```
 
 ---
@@ -98,15 +97,14 @@ slider.destroy();   // Remove slider instance
 ```
 pico-slider/
 ├── src/                     # Source files (edit these)
-│   ├── slider.js
-│   ├── slider.css           # Pico.css-based styles
-│   └── slider.standalone.css# Standalone styles
+│   ├── pico-slider.js
+│   ├── pico-slider.css           # Pico.css-based styles
+│   └── pico-slider.standalone.css# Standalone styles
 ├── dist/                    # Build output (published to npm)
-│   ├── slider.js
-│   ├── slider.esm.js
-│   ├── slider.css
-│   ├── slider.standalone.js
-│   └── slider.standalone.css
+│   ├── pico-slider.js
+│   ├── pico-slider.esm.js
+│   ├── pico-slider.css
+│   └── pico-slider.standalone.css
 ├── demo/                    # Example demo page
 │   └── index.html
 ├── index.d.ts               # TypeScript typings

@@ -7,17 +7,17 @@ const isDev = process.env.ROLLUP_WATCH === "true";
 
 export default [
     {
-        input: "src/slider.js",
+        input: "src/pico-slider.js",
         output: [
-            { file: "dist/slider.js", format: "umd", name: "PicoSlider", sourcemap: true },
-            { file: "dist/slider.min.js", format: "umd", name: "PicoSlider", plugins: [terser()], sourcemap: true },
-            { file: "dist/slider.esm.js", format: "esm", sourcemap: true }
+            { file: "dist/pico-slider.js", format: "umd", name: "PicoSlider", sourcemap: true },
+            { file: "dist/pico-slider.min.js", format: "umd", name: "PicoSlider", plugins: [terser()], sourcemap: true },
+            { file: "dist/pico-slider.esm.js", format: "esm", sourcemap: true }
         ],
         plugins: [
             copy({
                 targets: [
-                    { src: "src/slider.css", dest: "dist" },
-                    { src: "src/slider.standalone.css", dest: "dist" }
+                    { src: "src/pico-slider.css", dest: "dist" },
+                    { src: "src/pico-slider.standalone.css", dest: "dist" }
                 ],
                 verbose: true
             }),

@@ -20,5 +20,4 @@ declare module "pico-slider" {
 }
 
 declare module "pico-slider/css";
-declare module "pico-slider/standalone";
 declare module "pico-slider/standalone/css";

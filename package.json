@@ -1,29 +1,24 @@
 {
     "name": "pico-slider-js",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A lightweight, reusable image slider for Pico.css (or standalone).",
     "type": "module",
-    "main": "dist/slider.js",
-    "module": "dist/slider.esm.js",
-    "style": "dist/slider.css",
+    "main": "dist/pico-slider.js",
+    "module": "dist/pico-slider.esm.js",
+    "style": "dist/pico-slider.css",
     "exports": {
         ".": {
-            "import": "./dist/slider.esm.js",
-            "require": "./dist/slider.js",
-            "default": "./dist/slider.js"
+            "import": "./dist/pico-slider.esm.js",
+            "require": "./dist/pico-slider.js",
+            "default": "./dist/pico-slider.js"
         },
         "./css": {
-            "import": "./dist/slider.css",
-            "default": "./dist/slider.css"
-        },
-        "./standalone": {
-            "import": "./dist/slider.standalone.js",
-            "require": "./dist/slider.standalone.js",
-            "default": "./dist/slider.standalone.js"
+            "import": "./dist/pico-slider.css",
+            "default": "./dist/pico-slider.css"
         },
         "./standalone/css": {
-            "import": "./dist/slider.standalone.css",
-            "default": "./dist/slider.standalone.css"
+            "import": "./dist/pico-slider.standalone.css",
+            "default": "./dist/pico-slider.standalone.css"
         }
     },
     "types": "index.d.ts",
