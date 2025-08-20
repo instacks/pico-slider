@@ -1,5 +1,5 @@
 {
-    "name": "pico-slider",
+    "name": "pico-slider-js",
     "version": "1.0.0",
     "description": "A lightweight, reusable image slider for Pico.css (or standalone).",
     "type": "module",

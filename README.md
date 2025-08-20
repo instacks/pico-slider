@@ -8,7 +8,7 @@ Supports multiple sliders per page, autoplay, captions, indicators, and keyboard
 ## 🚀 Installation
 
 ```bash
-npm install pico-slider
+npm install pico-slider-js
 ```
 
 Or via CDN:
@@ -16,12 +16,12 @@ Or via CDN:
 ```html
 <!-- Pico.css version -->
 <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
-<link rel="stylesheet" href="https://unpkg.com/pico-slider/dist/slider.css">
-<script src="https://unpkg.com/pico-slider/dist/slider.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/pico-slider-js/dist/slider.css">
+<script src="https://unpkg.com/pico-slider-js/dist/slider.js"></script>
 
 <!-- Standalone version -->
-<link rel="stylesheet" href="https://unpkg.com/pico-slider/dist/slider.standalone.css">
-<script src="https://unpkg.com/pico-slider/dist/slider.standalone.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/pico-slider-js/dist/slider.standalone.css">
+<script src="https://unpkg.com/pico-slider-js/dist/slider.standalone.js"></script>
 ```
 
 ---
